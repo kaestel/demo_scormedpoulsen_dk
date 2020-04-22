@@ -1,0 +1,41 @@
+#header #navigation,
+#header .logo,
+#header .servicenavigation {display: none;}
+
+#header .logos {
+	z-index: 900;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#header .logos .tuborg {
+	position: relative;
+	float: left; 
+	margin: 26px 0 0 120px;
+	background: url("/img/smartphone/tuborg.png") no-repeat center center;
+	background-size: contain;
+
+	width: 126px;
+	height: 30px;
+}
+#header .logos .motto {
+	position: relative;
+	float: right; 
+	margin: 26px 120px 0 0;
+	background: url("/img/smartphone/dmr.png") no-repeat center center;
+	background-size: contain;
+
+	width: 70px;
+	height: 27px;
+}
+
+#header .logos a {
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+}

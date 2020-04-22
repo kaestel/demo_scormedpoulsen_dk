@@ -1,0 +1,533 @@
+/*
+asset-builder @ 2019-05-06 11:11:51
+*/
+
+/*seg_desktop_include.css*/
+
+/*s-fonts.css*/
+@font-face {
+	font-family: 'anton_regular';
+	src: url('fonts/anton-webfont.eot');
+	src: url('fonts/anton-webfont.eot?#iefix') format('embedded-opentype'),
+			url('fonts/anton-webfont.woff2') format('woff2'),
+			url('fonts/anton-webfont.woff') format('woff'),
+			url('fonts/anton-webfont.ttf') format('truetype'),
+			url('fonts/anton-webfont.svg#antonregular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'tuborg_serif_regular';
+	src: url('fonts/tuborgserif-regular-webfont.eot');
+	src: url('fonts/tuborgserif-regular-webfont.eot?#iefix') format('embedded-opentype'),
+			url('fonts/tuborgserif-regular-webfont.woff2') format('woff2'),
+			url('fonts/tuborgserif-regular-webfont.woff') format('woff'),
+			url('fonts/tuborgserif-regular-webfont.ttf') format('truetype'),
+			url('fonts/tuborgserif-regular-webfont.svg#tuborg_serifregular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'tuborg_serif_bold';
+	src: url('fonts/tuborgserif-bold-webfont.eot');
+	src: url('fonts/tuborgserif-bold-webfont.eot?#iefix') format('embedded-opentype'),
+			url('fonts/tuborgserif-bold-webfont.woff2') format('woff2'),
+			url('fonts/tuborgserif-bold-webfont.woff') format('woff'),
+			url('fonts/tuborgserif-bold-webfont.ttf') format('truetype'),
+			url('fonts/tuborgserif-bold-webfont.svg#tuborg_serifbold') format('svg');
+	font-weight: 700;
+	font-style: bold;
+}
+@font-face {
+	font-family: 'tuborg_serif_extrabold';
+	src: url('fonts/tuborgserif-extrabold-webfont.eot');
+	src: url('fonts/tuborgserif-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+			url('fonts/tuborgserif-extrabold-webfont.woff2') format('woff2'),
+			url('fonts/tuborgserif-extrabold-webfont.woff') format('woff'),
+			url('fonts/tuborgserif-extrabold-webfont.ttf') format('truetype'),
+			url('fonts/tuborgserif-extrabold-webfont.svg#webfontregular') format('svg');
+	font-weight: 800;
+	font-style: bold;
+}
+
+/*s-page.css*/
+* {font-family: "tuborg_serif_regular"; color: #000000;
+	-webkit-text-size-adjust: none;
+	-webkit-font-smoothing: antialiased;
+}
+html {min-height: 100%;}
+body {background: #ffffff; margin: 0; overflow-y: scroll; overflow-x: hidden;}
+*:focus {
+	outline: none;
+}
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dd, dt {padding: 0; margin: 0;}
+h1, h2, h3, h4, h5, h6, p, li, dd, dt, span, a {line-height: 1em; font-weight: normal;}
+ul {list-style: none;}
+a {text-decoration: none; cursor: pointer;}
+img {border: 0; display: block;}
+form, fieldset, label, input, select, textarea {padding: 0; margin: 0; font-weight: normal;}
+fieldset {border: none;}
+input, select, textarea {font-size: 14px; color: #333333;}
+input, textarea {outline: none;}
+a, span {font-size: inherit; font-family: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; color: inherit; text-transform: inherit;}
+em, strong {font-size: inherit; font-family: inherit; line-height: inherit; color: inherit; text-transform: inherit;}
+sup {line-height: 1em; font-family: inherit; color: inherit;}
+h1 {padding: 0 70px 30px; font-size: 48px; line-height: 1.05em;
+	font-family: "PT Serif", Times, serif;
+}
+h2 {padding: 0 70px 30px; font-size: 30px; line-height: 1.1em;
+	font-family: "PT Serif", Times, serif;
+}
+h3 {padding: 0 70px 10px; font-size: 20px; line-height: 1.25em;}
+h4 {padding: 0 70px 5px; font-size: 14px; line-height: 1em; font-weight: bold;}
+h5 {padding: 0 70px 2px; font-size: 14px; line-height: 1em; font-weight: bold;}
+h6 {padding: 0 70px 2px; font-size: 14px; line-height: 1em; font-weight: bold;}
+p {padding: 0 70px 20px; font-size: 14px; line-height: 1.25em;}
+ul,
+ol {font-size: 0;}
+li {font-size: 13px; line-height: 1.25em;}
+dl {font-size: 0;}
+dt,
+dd {display: inline-block; vertical-align: top; font-size: 13px; line-height: 1.25em;}
+#page {position: relative; min-height: 100%; min-width: 640px;}
+#page ul.info {display: none;}
+#smartphone_switch {z-index: 11000; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.95); text-align: left; opacity: 0;}
+#smartphone_switch h1 {padding: 40px 20px; font-size: 36px; width: 300px;}
+#smartphone_switch p {padding: 0 20px 20px; width: 250px;}
+#smartphone_switch ul {padding: 30px 20px 20px;}
+#smartphone_switch li.switch {float: right;}
+
+/*s-header.css*/
+#header #navigation,
+#header .logo,
+#header .servicenavigation {display: none;}
+#header .logos {
+	z-index: 900;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+#header .logos .tuborg {
+	position: relative;
+	float: left; 
+	margin: 26px 0 0 120px;
+	background: url("../img/smartphone/tuborg.png") no-repeat center center;
+	background-size: contain;
+	width: 126px;
+	height: 30px;
+}
+#header .logos .motto {
+	position: relative;
+	float: right; 
+	margin: 26px 120px 0 0;
+	background: url("../img/smartphone/dmr.png") no-repeat center center;
+	background-size: contain;
+	width: 70px;
+	height: 27px;
+}
+#header .logos a {
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/*s-content.css*/
+#content {overflow: hidden;}
+#content .section {position: relative;}
+#content h2 {
+	width: 239px;
+	height: 98px;
+	font-family: "tuborg_serif_extrabold";
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 6px #000000;
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.333);
+	box-sizing: border-box;
+	padding: 35px 0 0 0;
+	margin: 0 auto;
+	user-select: none;
+	user-select: none;
+	-webkit-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	color: #ffd1df;
+	background: url("../img/desktop/roses.png") no-repeat center center;
+	background-size: contain;
+}
+#content #hits,
+#content #top,
+#content #new,
+#content #videos {
+	position: relative;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	min-height: 533px;
+	user-select: none;
+	-webkit-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	background: url("../img/desktop/gradient.png") repeat-x top left;
+	background-color: #2c4f2a;
+}
+#content .disabled {
+	pointer-events: none;
+	opacity: 0.25;
+}
+#content #landing {
+	background: rgb(255,228,228);
+	background: radial-gradient(circle, rgba(255,228,228,1) 0%, rgba(255,225,228,1) 50%, rgba(255,204,212,1) 100%);
+}
+#content #landing h1 {
+	display: block;
+	text-indent: -99999px;
+	width: 45%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0 auto;
+	background: url("../img/desktop/keyvisual.png") no-repeat center center;
+	background-size: contain;
+}
+#content #landing p {
+	position: absolute;
+	bottom: 5%;
+	padding: 0;
+	width: 100%;
+	font-size: 20px;
+	font-family: "tuborg_serif_extrabold";
+	color: #2c4f2a;
+	text-transform: uppercase;
+	text-align: center;
+}
+#content div.memes {
+	margin: 0 auto; 
+	position: relative; 
+	white-space: nowrap; 
+	overflow-wrap: break-word; 
+	overflow: hidden; 
+	margin-top: 38px;
+}
+#content div.memes ul {display: inline-block; vertical-align: top; cursor: ew-resize;}
+#content div.memes ul li {display: inline-block; position: relative; margin: 0 60px 0 0; vertical-align: top;}
+#content div.memes ul li:last-child {margin: 0;}
+#content div.memes ul li p {
+	white-space: normal;
+	font-family: "anton_regular";
+	font-size: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+	user-select: none;
+	-webkit-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	padding: 10px;
+}
+#content div.memes ul li p.top {position: absolute; top: 0; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+#content div.memes ul li p.bottom {position: absolute; bottom: 0; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+#content div.memes ul li.generator {
+	background: #1F271F;
+	box-shadow: 0 12px 14px 0 rgba(0,0,0,0.19);
+	cursor: pointer;
+}
+#content div.memes ul li.generator p {
+	position: absolute;
+	font-family: "tuborg_serif_extrabold";
+	box-sizing: border-box;
+	color: #FFA7B3;
+	text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+#content div.memes ul li.generator p.title {top: 25px; font-size: 30px; padding: 0 18px;}
+#content div.memes ul li.generator p.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	width: 85%;
+	height: 51px;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 30px;
+	border: 1px solid #FFA7B3;
+}
+#content div.memes ul li.generator p.button {}
+#content .arrow {
+	width: 30px;
+	height: 30px;
+	margin-top: -5px;
+	cursor: pointer;
+	background: url("../img/desktop/arrow.png") no-repeat center center;
+	background-size: cover;
+}
+#content .arrow.left {
+	z-index: 20;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%) scaleX(-1);
+}
+#content .arrow.right {
+	z-index: 20;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+}
+#content div.videos {margin: 0 auto; white-space: nowrap; margin-top: 38px;}
+#content div.videos ul {display: inline-block; vertical-align: top;}
+#content div.videos ul li {display: inline-block; position: relative; margin: 0 64px 0 0; vertical-align: top; cursor: pointer;}
+#content div.videos ul li:last-child {margin: 0;}
+#content div.videos ul li p {
+	position: absolute;
+	left: 0;
+	bottom: -30px;
+	font-family: "tuborg_serif_extrabold";
+	font-size: 20px;
+	text-transform: uppercase;
+	padding: 0;
+	color: #ffffff;
+	pointer-events: none;
+}
+#content div.heart {
+	z-index: 10;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	left: 0;
+	background: url("../img/smartphone/heart.png") no-repeat center center;
+	background-size: contain;
+	cursor: pointer;
+}
+#content .memes div.heart {bottom: -47px;}
+#content .videos div.heart {bottom: -67px;}
+#content div.page_missing {padding-bottom: 38px; padding-top: 100px;}
+#generator {
+	z-index: 999;
+	overflow-y: scroll;
+	display: none;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgb(255,228,228);
+	background: radial-gradient(circle, rgba(255,228,228,1) 0%, rgba(255,225,228,1) 50%, rgba(255,204,212,1) 100%);
+}
+#generator .wrapper {padding-top: 36px;}
+#generator p.top, p.bottom {cursor: text;}
+#generator p.confirm {
+	display: none;
+	width: 215px;
+	font-size: 18px;
+	font-family: "tuborg_serif_extrabold";
+	color: #2c4f2a;
+	text-align: center;
+	margin: 0 auto;
+	padding: 30px 0 0 0;
+}
+#generator ul.actions li {
+	position: relative;
+	width: 215px;
+	height: 50px;
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid #2c4f2a;
+	cursor: pointer;
+}
+#generator div.memes ul li p {
+	user-select: all;
+	-webkit-user-select: all; 
+	-webkit-user-select: text; 
+	-moz-user-select: all; 
+	-ms-user-select: all; 
+}
+#generator div.arrow {
+	background: url("../img/desktop/arrow-dark.png") no-repeat center center;
+	background-size: cover;
+}
+#generator ul.actions {
+	padding-top: 30px;
+}
+#generator ul.actions li a {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	font-size: 20px;
+	font-family: "tuborg_serif_extrabold";
+	text-transform: uppercase;
+}
+#generator ul.actions li.ok a {color: #2c4f2a;}
+#generator ul.actions li.submit {background: #2c4f2a;}
+#generator ul.actions li.submit a {color: #ffffff;}
+#generator p.hide {
+	width: 100%;
+	padding: 30px 0 30px 0;
+	font-size: 16px;
+	font-family: "tuborg_serif_extrabold";
+	color: #2c4f2a;
+	text-transform: uppercase;
+	text-align: center;
+}
+#video {
+	z-index: 999;
+	overflow-y: scroll;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding-bottom:75px;
+	background: rgb(255,228,228);
+	background: radial-gradient(circle, rgba(255,228,228,1) 0%, rgba(255,225,228,1) 50%, rgba(255,204,212,1) 100%);
+}
+#video p {
+	font-family: "tuborg_serif_extrabold";
+	font-size: 16px;
+	color: #2c4f2a;
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 20px;
+	cursor: pointer;
+}
+#video iframe {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+#terms {
+	z-index: 999;
+	overflow-y: scroll;
+	display: none;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: url("../img/smartphone/gradient.png") repeat-x top left;
+	background-color: #2c4f2a;
+}
+#terms .wrapper {
+	min-height: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+#terms h2 {margin-bottom: 12px; margin-top: 36px;}
+#terms p {
+	font-family: "tuborg_serif_regular";
+	text-align: center;
+	font-size: 18px; 
+	color: #ffffff;
+}
+#terms ul li.close {
+	font-family: "tuborg_serif_extrabold";
+	font-size: 20px; 
+	text-align: center;
+	text-transform: uppercase; 
+	width: 150px; 
+	height: 51px; 
+	margin: 0 auto;
+	color: #ffffff; 
+	border: 1px solid #ffffff; 
+	cursor: pointer;
+}
+#terms ul li.close a {
+	position: relative;
+	top: 28%;
+}
+
+/*s-footer.css*/
+#footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 522px;
+	background-color: #292e27;
+}
+#footer .logo,
+#footer .servicenavigation {text-transform: uppercase; 	text-align: center;}
+#footer .logo {
+	position: relative;
+	margin: 125px 0 75px;
+	background: url("../img/smartphone/tuborg_white.png") no-repeat center center;
+	background-size: contain;
+	width: 185px;
+	height: 46px;
+}
+#footer .logo a {
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+}
+#footer .servicenavigation > li {
+	display: inline-block;
+	padding: 0 15px;
+}
+#footer .servicenavigation > li > a {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #ffffff;
+	font-family: "tuborg_serif_extrabold";
+	font-size: 20px;
+	width: 213px;
+	height: 51px;
+	margin-bottom: 15px;
+	border: 1px solid #636762;
+	background-color: #292e27;
+}
+
+/*s-cookie.css*/
+#cookie {
+	z-index: 100;
+	position: fixed;
+	background: rgb(255,228,228);
+	background: radial-gradient(circle, rgba(255,228,228,1) 0%, rgba(255,225,228,1) 50%, rgba(255,204,212,1) 100%);
+}
+#cookie p {
+	font-family: 'tuborg_serif_extrabold';
+	font-size: 16px;
+	text-transform: uppercase;
+}
+#cookie .button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+	width: 277px;
+	height: 96px;
+	background-color: #2c4f2a;
+}
+#cookie .button p {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 0;
+	text-align: center;
+	color: #ffffff;
+}
+#cookie .button span {
+	font-size: 20px;
+}
+#cookie .link {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	cursor: pointer;
+}
+#cookie .link p {
+	text-align: center;
+	color: #2c4f2a;
+}

@@ -1,0 +1,50 @@
+@font-face {
+	font-family: 'anton_regular';
+	src: url('../fonts/anton-webfont.eot');
+	src: url('../fonts/anton-webfont.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/anton-webfont.woff2') format('woff2'),
+			url('../fonts/anton-webfont.woff') format('woff'),
+			url('../fonts/anton-webfont.ttf') format('truetype'),
+			url('../fonts/anton-webfont.svg#antonregular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'tuborg_serif_regular';
+	src: url('../fonts/tuborgserif-regular-webfont.eot');
+	src: url('../fonts/tuborgserif-regular-webfont.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/tuborgserif-regular-webfont.woff2') format('woff2'),
+			url('../fonts/tuborgserif-regular-webfont.woff') format('woff'),
+			url('../fonts/tuborgserif-regular-webfont.ttf') format('truetype'),
+			url('../fonts/tuborgserif-regular-webfont.svg#tuborg_serifregular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'tuborg_serif_bold';
+	src: url('../fonts/tuborgserif-bold-webfont.eot');
+	src: url('../fonts/tuborgserif-bold-webfont.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/tuborgserif-bold-webfont.woff2') format('woff2'),
+			url('../fonts/tuborgserif-bold-webfont.woff') format('woff'),
+			url('../fonts/tuborgserif-bold-webfont.ttf') format('truetype'),
+			url('../fonts/tuborgserif-bold-webfont.svg#tuborg_serifbold') format('svg');
+	font-weight: 700;
+	font-style: bold;
+}
+
+
+@font-face {
+	font-family: 'tuborg_serif_extrabold';
+	src: url('../fonts/tuborgserif-extrabold-webfont.eot');
+	src: url('../fonts/tuborgserif-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/tuborgserif-extrabold-webfont.woff2') format('woff2'),
+			url('../fonts/tuborgserif-extrabold-webfont.woff') format('woff'),
+			url('../fonts/tuborgserif-extrabold-webfont.ttf') format('truetype'),
+			url('../fonts/tuborgserif-extrabold-webfont.svg#webfontregular') format('svg');
+	font-weight: 800;
+	font-style: bold;
+}

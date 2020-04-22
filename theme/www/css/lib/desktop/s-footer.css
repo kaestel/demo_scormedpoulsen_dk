@@ -1,0 +1,54 @@
+#footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+
+	height: 522px;
+	background-color: #292e27;
+}
+
+#footer .logo,
+#footer .servicenavigation {text-transform: uppercase; 	text-align: center;}
+
+#footer .logo {
+	position: relative;
+	margin: 125px 0 75px;
+	
+	background: url("/img/smartphone/tuborg_white.png") no-repeat center center;
+	background-size: contain;
+
+	width: 185px;
+	height: 46px;
+}
+
+#footer .logo a {
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#footer .servicenavigation > li {
+	display: inline-block;
+	padding: 0 15px;
+}
+
+#footer .servicenavigation > li > a {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	color: #ffffff;
+	font-family: "tuborg_serif_extrabold";
+	font-size: 20px;
+
+	width: 213px;
+	height: 51px;
+	margin-bottom: 15px;
+
+	border: 1px solid #636762;
+	background-color: #292e27;
+}
